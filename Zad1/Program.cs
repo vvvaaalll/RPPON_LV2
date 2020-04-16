@@ -15,7 +15,7 @@ namespace Zad1
             int numberOfDices = 20;
 
             for (int i = 0; i < numberOfDices; i++) {
-
+                
                 dices.InsertDie(new Die(6));
             
             }
