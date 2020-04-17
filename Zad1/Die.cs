@@ -47,6 +47,10 @@ namespace Zad1
             return rolledNumber;
         }
 
+        public int GetNumberOfSides() {
+            return numberOfSides;
+        }
+
     }
 
 }
