@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Zad1
 {
-    class DiceRoller
-    {
+    class DiceRoller : ILoggable
+    { 
         private List<Die> dice;
         private List<int> resultForEachRoll;
         private ILogger logger;
@@ -17,7 +17,7 @@ namespace Zad1
         
         }
         public void InsertDie(Die die)
-        {
+        {   
             dice.Add(die);
         }
         public void RollAllDice()
@@ -45,14 +45,28 @@ namespace Zad1
             this.logger = logger;
         }
 
-        public void LogRollingResults() {
+        //public void LogRollingResults() {
 
-            for (int i = 0; i < resultForEachRoll.Count; i++) {
+        //    for (int i = 0; i < this.resultForEachRoll.Count; i++) {
 
-                logger.Log(resultForEachRoll[i].ToString());
+        //        logger.Log(resultForEachRoll[i].ToString());
 
-            }
+        //    }
         
+        //}
+
+
+        public string GetStringRepresentation() {
+
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < this.resultForEachRoll.Count; i++) {
+
+                stringBuilder.Append(resultForEachRoll.ToString()).Append("\n");   //provjeriti zasto ne add
+            
+            }
+
+            return stringBuilder.ToString();
         }
 
     }

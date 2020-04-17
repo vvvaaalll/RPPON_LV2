@@ -13,13 +13,13 @@ namespace Zad1
 
         }
 
-        public void Log(string message)
+        public void Log(ILoggable message)
         {
 
             using (System.IO.StreamWriter writer = new System.IO.StreamWriter(this.filePath))
             {
 
-                writer.WriteLine(message);
+                writer.WriteLine(message.GetStringRepresentation());
             
             }
 

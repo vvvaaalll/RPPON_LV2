@@ -6,10 +6,10 @@ namespace Zad1
 {
     class ConsoleLogger : ILogger
     {
-       
-            public void Log(string message) {
 
-                Console.WriteLine(message);
+            public void Log(ILoggable message) {
+
+                Console.WriteLine(message.GetStringRepresentation());
 
             }
 

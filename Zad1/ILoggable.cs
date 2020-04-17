@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Zad1
 {
-    interface ILogger
+    interface ILoggable
     {
-        void Log(ILoggable message);
+        string GetStringRepresentation();
 
     }
 }
