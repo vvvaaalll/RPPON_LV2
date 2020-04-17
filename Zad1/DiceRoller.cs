@@ -8,10 +8,13 @@ namespace Zad1
     {
         private List<Die> dice;
         private List<int> resultForEachRoll;
+        private ILogger logger;
+
         public DiceRoller()
         {
             this.dice = new List<Die>();
             this.resultForEachRoll = new List<int>();
+        
         }
         public void InsertDie(Die die)
         {
@@ -37,6 +40,21 @@ namespace Zad1
         {
             get { return dice.Count; }
         }
+
+        public void SetLogger(ILogger logger) {
+            this.logger = logger;
+        }
+
+        public void LogRollingResults() {
+
+            for (int i = 0; i < resultForEachRoll.Count; i++) {
+
+                logger.Log(resultForEachRoll[i].ToString());
+
+            }
+        
+        }
+
     }
 
 }

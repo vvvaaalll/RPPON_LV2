@@ -7,7 +7,9 @@ namespace Zad1
     class Die
     {
         private int numberOfSides;
-        private RandomGenerator randomGenerator = RandomGenerator.GetInstance();
+           private RandomGenerator randomGenerator;
+      
+    
 
 
         //public Die(int numberOfSides)
@@ -26,6 +28,8 @@ namespace Zad1
             public Die(int numberOfSides)
         {
             this.numberOfSides = numberOfSides;
+
+            this.randomGenerator = RandomGenerator.GetInstance();
             
         }
 

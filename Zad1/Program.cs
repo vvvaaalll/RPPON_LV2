@@ -8,9 +8,8 @@ namespace Zad1
         static void Main(string[] args)
 
         {
-           
-
-            DiceRoller dices = new DiceRoller();
+         
+        DiceRoller dices = new DiceRoller();
             Random randomGenerator = new Random();
 
             int numberOfDices = 20;
@@ -35,7 +34,7 @@ namespace Zad1
             
             }
 
-
+            
 
 
         }
