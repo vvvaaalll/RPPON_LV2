@@ -11,13 +11,18 @@ namespace Zad1
            
 
             DiceRoller dices = new DiceRoller();
+            Random randomGenerator = new Random();
 
             int numberOfDices = 20;
 
             for (int i = 0; i < numberOfDices; i++) {
-                
+
+                //dices.InsertDie(new Die(6));
+
+
+                //dices.InsertDie(new Die(6, ref randomGenerator));
+
                 dices.InsertDie(new Die(6));
-            
             }
 
             dices.RollAllDice();
@@ -29,6 +34,10 @@ namespace Zad1
                 Console.WriteLine(rolledValues[i]);
             
             }
+
+
+
+
         }
     }
 }

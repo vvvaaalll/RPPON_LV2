@@ -7,17 +7,42 @@ namespace Zad1
     class Die
     {
         private int numberOfSides;
-        private Random randomGenerator;
-        public Die(int numberOfSides)
+        private RandomGenerator randomGenerator = RandomGenerator.GetInstance();
+
+
+        //public Die(int numberOfSides)
+        //  {
+        //      this.numberOfSides = numberOfSides;
+        //      this.randomGenerator = new Random();
+        //  }
+
+        //public Die(int numberOfSides, ref Random generator)
+        //{
+        //    this.numberOfSides = numberOfSides;
+        //    this.randomGenerator = generator;
+
+        //}
+
+            public Die(int numberOfSides)
         {
             this.numberOfSides = numberOfSides;
-            this.randomGenerator = new Random();
+            
         }
+
+
+
+        //public int Roll()
+        //{
+        //    int rolledNumber = randomGenerator.Next(1, numberOfSides + 1);
+        //    return rolledNumber;
+        //}
+
         public int Roll()
         {
-            int rolledNumber = randomGenerator.Next(1, numberOfSides + 1);
+            int rolledNumber = randomGenerator.NextInt(1, numberOfSides + 1);
             return rolledNumber;
         }
+
     }
 
 }
